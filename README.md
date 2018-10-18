@@ -17,7 +17,9 @@ So, I had the pleasure of scouring Janice’s photos to build my collage, and I 
 
 Then, I went through the 26 pistaches for each of the 60 images, and chose the one that I thought most truly represented that memory to me. The photo that I think best captures that frozen moment. Thus, trying to portray how I view the world that she is portraying. Seeing her world through my eyes.
 
-Also, for fun, I took all 1500 photos and put it in a super-collage, I call the meg. That photo is 170MB.
+Also, for fun, I took all 1500 photos and put it in a super-collage, I call the meg. That photo is 170MB. That image is fucking awesome! But I had to scale down the image so I can have it on github. So the resolution is wack. But I have the real version and its literally the best thing ever.
+
+<p align="center">  <img src="scaled_down_mega_collage.jpg?"> </p>
 
 ## General Overview of Semester
 I had went for a run one morning, with the task of figuring out what I wanted to do for an independent study. The run was through my campus, and then into a wooded park near my university. About two minutes into the run, which was technically a brisk walk, my mind had already wandered from my original task, and I started to think about something cool that my professor had sent me earlier in the summer [2]. It was a 360 degree virtual reality experience of Van Gogh’s Starry Night world. When I watched it for the first time, I freaked out, and thought it was the coolest thing ever made.
