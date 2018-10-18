@@ -7,14 +7,14 @@ import os
 #     i += 1
 
 
-directory_path = "./collage_photos/"
+directory_path = "./regular_photos/"
 text = ""
 directory = os.listdir(directory_path)
 
 for filename in directory:
-    if (".png" in filename):
+    if (".jpg" in filename):
         text += '<p align="center">  <img width="100" height="100" src="'+filename+'?"> </p>'
         text += '<p align="center">'+filename+'</p>'
-        text += "\n***\n"
+        text += "\n\n***\n\n"
 
 print(text)
