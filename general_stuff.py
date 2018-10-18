@@ -15,6 +15,6 @@ for filename in directory:
     if (".png" in filename):
         text += '<p align="center">  <img width="100" height="100" src="'+filename+'?"> </p>'
         text += '<p align="center">'+filename+'</p>'
-        text += "+\n---\n"
+        text += "\n---\n"
 
 print(text)
