@@ -14,7 +14,8 @@ Either way, in deciding how to celebrate the birth of my mom, I came to the conc
 So, I had the pleasure of scouring Janice’s photos to build my collage, and I grew increasingly fearful for my privacy in the process. Regardless, I grabbed about 60 photos from her facebook (and some others I wanted to throw in), and created 26 different pistaches with styles ranging from Picasso to Van Gogh, resulting in over 1500 total photos. From the 26 stylized photos, I then chose the one that I thought most truly represented that memory to me. Thus, trying to portray how I view the world that she is portraying. Seeing her world through my eyes.
 
 Also, for fun, I took all 1500 photos and put it in a super-collage, I call the meg. That photo is 170MB.
-General Overview of Semester
+
+## General Overview of Semester
 Moving on, I had went for a run one morning, with the task of figuring out what I wanted to do for an independent study this semester. The run was through my campus, and then into a wooded park near my university. About two minutes into the walk, my mind had already wandered from my original task, and I started to think about something cool that my professor had sent me, earlier in the summer, [2]. It was a 360 degree virtual reality experience of Van Gogh’s Starry Night world. When I watched it for the first time, I freaked out, and thought it was the coolest thing ever made. 
 
 Anyways, that made me think about doing something like that. I really liked what that was, but it was restricted to that piece, and I wanted to see the world like that. I wanted to see the world through the lense of a famous artist, or any artist for that case. Which is what led me to read up about the style transfer, and the possibilities of experiencing the world in real time on a mobile device.
