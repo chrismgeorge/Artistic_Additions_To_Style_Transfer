@@ -37,9 +37,9 @@ The problems that plagued my experiences revolved around getting a working model
 For reference the model I found that ultimately worked was [3] Google Deeplab. This has modified versions of the model that are specifically made for mobile devices. For those interested, the general problem with other models are that they might use certain layers that aren’t compatible with Android devices, or they might use certain features that aren’t initially loaded as part of the TensorFlow library for Android.
 
 # Process
-Applying Neural Style Transfer to images results in beautiful images that really feel like the artist themselves hand generated the image. But, in many cases the resulting images loose the real-world nature of the image. With the help of my advisor on this project, Eunsu Kang, I aimed at bringing back the ‘realness’ of an image.
+Applying Neural Style Transfer to images results in beautiful images that really feel like the artist themselves hand generated the image. But, in many cases images taken of the the real-world loose their real-world nature. They can become very flat and 2-Dimensional. With the help of my advisor on this project, Eunsu Kang, I aimed at bringing back the ‘realness’ of a pistache.
 
-I implemented two specific things to make pistaches more realistic in post-processing, Increased Luminance Matching, and Segmented Lens Blur.
+I implemented two specific things to make pistaches more realistic in post-processing, Increased Luminance Matching, and Segmented Background Blurring.
 
 ## Increased Luminance Matching
 In many situations, real world images turned into pistaches can get completely absorbed by the style they are trying to replicate. One way to break this is to simply weigh the style less and less, but that leaves an unsatisfying resulting as the original image intrudes on the new image being created. To counteract this, I have implemented luminance matching. Luminance matching is kind of already done when the image goes through the network, but I have found that increasing the intensity in post-processing can correlate with more realistic photos that still maintain the properties of the original style. Luminance matching is performed on a pixel-by-pixel basis, in which the pixel of the stylized photo is increased or decreased depending on its luminosity in proportion to the corresponding pixel luminosity of the original photo.
@@ -53,8 +53,8 @@ Lumanince Matching         |  No Lumanince Matching
 ![](./readme_images/lum_match_3.png "(3.1)")  |  ![](./readme_images/lum_match_3_non.png "(3.2)")
 ![](./readme_images/lum_match_4.png "(4.1)")  |  ![](./readme_images/lum_match_4_non.png "(4.2)")
 
-## Segmented Lens Blur
-I found a pre-existing model for image segmentation [3], and I was able to successfully implement on an Android device with the help of [3.1]. My images usually focused on photos of people, so I simply masked the segmented people from a non-blurred pistache onto the blurred image of the same pistache. The resulting images have mixed results. If an image is successfully segmented then the image is usually pretty good, but some styles just don't create the most fluent photos, and those don't usually end up looking too good. On the other hand, some photos look amazing. (I have only included good resulting photos below, but just taking a look through all_stylized_photos, you will find some weird looking ones.)
+## Segmented Background Blurring
+I found a pre-existing model for image segmentation [3]. I was able to successfully implement the model on an Android device with the help of [3.1]. My images usually focused on photos of people, so I simply masked the segmented people from a non-blurred pistache onto the blurred image of the same pistache. The resulting images have mixed results. If an image is successfully segmented then the image is usually pretty good, but some styles just don't create the most fluent photos, and those don't usually end up looking too good. On the other hand, some photos look amazing. (I have only included good resulting photos below, but just taking a look through all_stylized_photos, you will find some weird looking ones.)
 
 Lens Blur       |  No Lens Blur
 :-------------------------:|:-------------------------:
