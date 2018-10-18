@@ -1,4 +1,4 @@
-##Introduction
+## Introduction
 A pistache is an artistic work that imitates the style of another one.
 
 This culmination of half a semester of work for my independent study has led to the current state of an edited android app, in which I implemented image-segmented background blurring, and increased luminance matching to a Google Codelab [1], that focuses on creating pistaches.
@@ -27,7 +27,7 @@ The problems that plagued my experiences revolved around getting a working model
 
 For reference the model I found that ultimately worked was [3] Google Deeplab. This has modified versions of the model that are specifically made for mobile devices. For those interested, the general problem with other models are that they might use certain layers that aren’t compatible with Android devices, or they might use certain features that aren’t initially loaded as part of the TensorFlow library for Android.
 
-##Process
+## Process
 Applying Neural Style Transfer to images results in beautiful images that really feel like the artist themselves hand generated the image. But, in many cases the resulting images loose the real-world nature of the image. In this report, I will outline a few methods in which I aimed at bringing back the ‘realness’ of an image.
 
 There are two primary contributions that I have added into artistic style transfer to make resulting images more realistic in post-processing, Increased Luminance Matching, and Segmented Lens Blur. 
@@ -36,7 +36,7 @@ In many situations, resulting images can get completely absorbed by the style th
 Segmented Lens Blur
 Using a pre-existing model for image segmentation[], I was able to successfully implement it on an Android device with the help of []. After gathering the segmentation within an image, where my images usually focused on photos of people, I simply masked the segmented people of the one image onto another. The resulting images has mixed results, depending on a number of things. Mostly, if the stylized image had pre-defined lines and edges around faces and bodies, then the resulting images looked very legitimate.
 
-##Mid Semester Summary
+## Mid Semester Summary
 Additionally, there are numerous other things that I have learned and failed through so far. I went into this semester with barely any knowledge of anything in this realm, and I really feel like I have learned a lot up to now, and am excited to continue to learn more and more.
 
 The first few weeks of my semester were spent trying to learn and understand the mathematics and qualities that modern day style transfer is based off of. I read a few of the dominant papers in the field that discussed the methods. 
