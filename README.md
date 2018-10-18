@@ -44,6 +44,8 @@ I implemented two specific things to make pistaches more realistic in post-proce
 ## Increased Luminance Matching
 In many situations, real world images turned into pistaches can get completely absorbed by the style they are trying to replicate. One way to break this is to simply weigh the style less and less, but that leaves an unsatisfying resulting as the original image intrudes on the new image being created. To counteract this, I have implemented luminance matching. Luminance matching is kind of already done when the image goes through the network, but I have found that increasing the intensity in post-processing can correlate with more realistic photos that still maintain the properties of the original style. Luminance matching is performed on a pixel-by-pixel basis, in which the pixel of the stylized photo is increased or decreased depending on its luminosity in proportion to the corresponding pixel luminosity of the original photo.
 
+As you can see in the photos below, there are varying results. Different styles are more or less affected. But in some the change is vary apparant. I would like to add in the ability to manually adjust how much lumanince matching occurs in a photo, and that is just adjusting a number and making it editable from within the app (but I am lazy..).
+
 Lumanince Matching         |  No Lumanince Matching
 :-------------------------:|:-------------------------:
 ![](./readme_images/lum_match_1.png "(1.1)")  |  ![](./readme_images/lum_match_1_non.png "(1.2)")
@@ -52,7 +54,14 @@ Lumanince Matching         |  No Lumanince Matching
 ![](./readme_images/lum_match_4.png "(4.1)")  |  ![](./readme_images/lum_match_4_non.png "(4.2)")
 
 ## Segmented Lens Blur
-I found a pre-existing model for image segmentation [3], and I was able to successfully implement on an Android device with the help of [3.1]. My images usually focused on photos of people, so I simply masked the segmented people from a non-blurred pistache onto the blurred image of the same pistache. The resulting images have mixed results.
+I found a pre-existing model for image segmentation [3], and I was able to successfully implement on an Android device with the help of [3.1]. My images usually focused on photos of people, so I simply masked the segmented people from a non-blurred pistache onto the blurred image of the same pistache. The resulting images have mixed results. If an image is successfully segmented then the image is usually pretty good, but some styles just don't create the most fluent photos, and those don't usually end up looking too good. On the other hand, some photos look amazing. (I have only included good resulting photos below, but just taking a look through all_stylized_photos, you will find some weird looking ones.)
+
+Lens Blur       |  No Lens Blur
+:-------------------------:|:-------------------------:
+![](./readme_images/blurred_1.png "(1.1)")  |  ![](./readme_images/blurred_1_non.png "(1.2)")
+![](./readme_images/blurred_2.png "(2.1)")  |  ![](./readme_images/blurred_2_non.png "(2.2)")
+![](./readme_images/blurred_3.png "(3.1)")  |  ![](./readme_images/blurred_3_non.png "(3.2)")
+![](./readme_images/blurred_4.png "(4.1)")  |  ![](./readme_images/blurred_4_non.png "(4.2)")
 
 # Summary of other work
 There are numerous other things that I have learned and failed through so far. I went into this semester with barely any knowledge of anything in this realm, and I really feel like I have learned a lot up to now, and am excited to continue to learn more and more.
