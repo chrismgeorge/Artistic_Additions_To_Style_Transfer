@@ -44,6 +44,13 @@ I implemented two specific things to make pistaches more realistic in post-proce
 ## Increased Luminance Matching
 In many situations, real world images turned into pistaches can get completely absorbed by the style they are trying to replicate. One way to break this is to simply weigh the style less and less, but that leaves an unsatisfying resulting as the original image intrudes on the new image being created. To counteract this, I have implemented luminance matching. Luminance matching is kind of already done when the image goes through the network, but I have found that increasing the intensity in post-processing can correlate with more realistic photos that still maintain the properties of the original style. Luminance matching is performed on a pixel-by-pixel basis, in which the pixel of the stylized photo is increased or decreased depending on its luminosity in proportion to the corresponding pixel luminosity of the original photo.
 
+Lumanince Matching         |  No Lumanince Matching
+:-------------------------:|:-------------------------:
+![](./readme_images/lum_match_1.png "(1.1)")  |  ![](./readme_images/lum_match_1_non.png "(1.2)")
+![](./readme_images/lum_match_2.png "(2.1)")  |  ![](./readme_images/lum_match_2_non.png "(2.2)")
+![](./readme_images/lum_match_3.png "(3.1)")  |  ![](./readme_images/lum_match_3_non.png "(3.2)")
+![](./readme_images/lum_match_4.png "(4.1)")  |  ![](./readme_images/lum_match_4_non.png "(4.2)")
+
 ## Segmented Lens Blur
 I found a pre-existing model for image segmentation [3], and I was able to successfully implement on an Android device with the help of [3.1]. My images usually focused on photos of people, so I simply masked the segmented people from a non-blurred pistache onto the blurred image of the same pistache. The resulting images have mixed results.
 
